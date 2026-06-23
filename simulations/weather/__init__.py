@@ -1,0 +1,1 @@
+# Weather simulation package init
