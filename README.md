@@ -1,9 +1,11 @@
+
 # LAM - Real-Time Simulation Platform
 
 **"Simulate Reality in Real Time"**
 
 LAM is a sophisticated real-time traffic simulation and analysis platform that combines AI-powered prediction, weather modeling, and interactive visualization. Built with Python and PySide6, it provides a comprehensive environment for simulating complex urban traffic systems and generating detailed analytical reports.
 
+<img width="1024" height="1536" alt="lam blueprint" src="https://github.com/user-attachments/assets/5affa60d-5dd9-4d84-a517-457fdf4bc74d" />
 ---
 
 ## Features
