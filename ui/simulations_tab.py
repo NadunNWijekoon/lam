@@ -4,6 +4,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt, QSize
 from PySide6.QtGui import QIcon, QPixmap
 import os
+import time
 
 from config import (
     COLOR_BACKGROUND, COLOR_CARD_BG, COLOR_PRIMARY, COLOR_SECONDARY,
@@ -104,9 +105,11 @@ class SimulationsTab(QWidget):
         main_layout.addLayout(top_layout, stretch=4)
         
         # 2. BOTTOM DETAILS AREA (Event logs, notifications, statistics)
-        bottom_layout = QHBoxLayout()
+        bottom_container = QFrame()
+        bottom_container.setFixedHeight(180)
+        bottom_layout = QHBoxLayout(bottom_container)
         bottom_layout.setSpacing(10)
-        bottom_layout.setFixedHeight(180)
+        bottom_layout.setContentsMargins(0, 0, 0, 0)
         
         # A. Scrollable event logs
         frame_logs = QFrame()
@@ -162,7 +165,7 @@ class SimulationsTab(QWidget):
         
         bottom_layout.addWidget(frame_notifications, stretch=3)
         
-        main_layout.addLayout(bottom_layout, stretch=1)
+        main_layout.addWidget(bottom_container, stretch=1)
 
     def play_simulation(self):
         if not self.engine.isRunning():
@@ -274,4 +277,3 @@ class QComboBox_Weather(QFrame):
         self.combo.currentTextChanged.connect(self.tab.change_weather)
         
         layout.addWidget(self.combo)
-import time
