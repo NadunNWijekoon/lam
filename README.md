@@ -138,21 +138,65 @@ lam/
 
 ## Running the Application
 
-### Start LAM
+### Quick Start
 
-```bash
-python main.py
-```
+1. **Ensure virtual environment is activated** (if created):
+   ```bash
+   # Windows
+   venv\Scripts\activate
+   # macOS/Linux
+   source venv/bin/activate
+   ```
 
-This will launch the main application window with the traffic simulation interface.
+2. **Start the application**:
+   ```bash
+   python main.py
+   ```
+
+3. The main LAM window will launch with the interface ready to use.
+
+### What Happens When You Run the App
+
+- The application initializes the database (auto-creates if it doesn't exist)
+- The UI loads with the **Dashboard** tab as the default view
+- Traffic simulation engine is ready but not running until you start a simulation
+- All configuration settings load from `config.py`
 
 ### Available Tabs
 
-1. **Dashboard** - Overview of real-time traffic metrics
+1. **Dashboard** - Overview of real-time traffic metrics and system status
 2. **Simulations** - Manage and control simulation scenarios
-3. **Analytics** - Detailed traffic analysis and statistics
-4. **Reports** - Generate and export simulation reports
-5. **Settings** - Configure application preferences
+3. **Analytics** - Detailed traffic analysis and statistics visualization
+4. **Reports** - Generate and export simulation reports (PDF, Excel)
+5. **Settings** - Configure application preferences and parameters
+
+### Running Your First Simulation
+
+1. Navigate to the **Simulations** tab
+2. Configure simulation parameters (grid size, vehicle count, weather effects)
+3. Click **"Start Simulation"** to begin
+4. Switch to the **Dashboard** tab to monitor real-time metrics
+5. Use the **Analytics** tab to view detailed statistics
+6. When finished, click **"Stop Simulation"**
+7. Generate reports from the **Reports** tab
+
+### Command Line Options
+
+```bash
+# Run with default settings
+python main.py
+
+# Note: Additional command-line arguments can be added in main.py if needed
+```
+
+### Troubleshooting Startup Issues
+
+| Issue | Solution |
+|-------|----------|
+| **ModuleNotFoundError** | Run `pip install -r requirements.txt` |
+| **Database locked error** | Delete `database/simulation.db` and restart |
+| **Window won't display** | Update PySide6: `pip install --upgrade PySide6` |
+| **Port already in use** | (If using API) Change API_PORT in `config.py` |
 
 ---
 
