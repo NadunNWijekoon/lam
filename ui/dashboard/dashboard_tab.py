@@ -109,7 +109,7 @@ class DashboardTab(QWidget):
         
         # Center Info
         info_layout = QVBoxLayout()
-        info_layout.setAlignment(Qt.VerticalAlignment.AlignCenter)
+        info_layout.setAlignment(Qt.AlignCenter)
         self.lbl_prediction_title = QLabel("AI TRAFFIC PREDICTOR ENGINE")
         self.lbl_prediction_title.setStyleSheet("font-weight: bold; font-size: 14px; color: #00BCD4;")
         self.lbl_prediction_desc = QLabel("Loading smart city traffic flow telemetry predictions...")
@@ -120,7 +120,7 @@ class DashboardTab(QWidget):
         
         # Right progress bar (Confidence)
         confidence_layout = QVBoxLayout()
-        confidence_layout.setAlignment(Qt.VerticalAlignment.AlignCenter)
+        confidence_layout.setAlignment(Qt.AlignCenter)
         self.lbl_confidence = QLabel("Confidence: --%")
         self.lbl_confidence.setStyleSheet("font-size: 11px; color: #888888; text-align: right;")
         self.prog_confidence = QProgressBar()
