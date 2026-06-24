@@ -4,7 +4,7 @@ from PySide6.QtWidgets import QWidget
 from PySide6.QtGui import QPainter, QColor, QPen, QBrush, QFont, QPolygonF
 from config import (
     COLOR_BACKGROUND, COLOR_BORDER, COLOR_PRIMARY, COLOR_SECONDARY,
-    COLOR_SUCCESS, COLOR_WARNING, COLOR_DANGER
+    COLOR_SUCCESS, COLOR_WARNING, COLOR_DANGER, COLOR_TEXT
 )
 
 class SimulationView(QWidget):
